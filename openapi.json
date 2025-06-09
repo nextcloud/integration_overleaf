@@ -1,9 +1,9 @@
 {
     "openapi": "3.0.3",
     "info": {
-        "title": "app_template",
+        "title": "integration_overleaf",
         "version": "0.0.1",
-        "description": "An example summary",
+        "description": "Integration of overleaf",
         "license": {
             "name": "agpl"
         }
@@ -47,12 +47,12 @@
         }
     },
     "paths": {
-        "/ocs/v2.php/apps/app_template/api": {
-            "get": {
-                "operationId": "api-index",
-                "summary": "An example API endpoint",
+        "/ocs/v2.php/apps/integration_overleaf/api/overleaf": {
+            "post": {
+                "operationId": "overleaf-get-overleaf",
+                "summary": "Generate an Overleaf link with all required shares for the given fileIds to be opened in Overleaf",
                 "tags": [
-                    "api"
+                    "overleaf"
                 ],
                 "security": [
                     {
@@ -62,6 +62,29 @@
                         "basic_auth": []
                     }
                 ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "required": [
+                                    "fileIds"
+                                ],
+                                "properties": {
+                                    "fileIds": {
+                                        "type": "array",
+                                        "description": "File ids to pass into the Overleaf link",
+                                        "items": {
+                                            "type": "integer",
+                                            "format": "int64"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
                 "parameters": [
                     {
                         "name": "OCS-APIRequest",
@@ -76,7 +99,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Data returned",
+                        "description": "Data Returned",
                         "content": {
                             "application/json": {
                                 "schema": {

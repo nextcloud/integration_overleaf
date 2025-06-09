@@ -7,7 +7,7 @@
 	<description>App to edit latex files using overleaf.</description>
 	<version>1.0.0</version>
 	<licence>agpl</licence>
-	<author mail="lukas@lschaefer.xyz" homepage="github.com/lukasdotcom">Lukas Schaefer</author>
+	<author mail="lukas@lschaefer.xyz" homepage="https://github.com/lukasdotcom">Lukas Schaefer</author>
 	<namespace>Overleaf</namespace>
 	<category>integration</category>
 	<category>office</category>

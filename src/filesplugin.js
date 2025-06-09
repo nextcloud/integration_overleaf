@@ -7,6 +7,7 @@ import axios from '@nextcloud/axios'
 const sendAction = new FileAction({
 	id: 'overleafOpen',
 	displayName: (nodes) => {
+		console.error(nodes)
 		return nodes.length > 1
 			? t('integration_overleaf', 'Open files in Overleaf')
 			: t('integration_overleaf', 'Open file in Overleaf')
@@ -19,10 +20,12 @@ const sendAction = new FileAction({
 	},
 	iconSvgInline: () => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">',
 	async exec(node) {
+		console.error(node)
 		await openInOverleaf(node)
 		return null
 	},
 	async execBatch(nodes) {
+		console.error(nodes)
 		await openInOverleaf(nodes[0])
 		return nodes.map(_ => null)
 	},
@@ -30,9 +33,9 @@ const sendAction = new FileAction({
 registerFileAction(sendAction)
 
 async function openInOverleaf(node) {
-	const url = generateUrl('/apps/integration_overleaf/share')
+	const url = generateUrl('/ocs/v2.php/apps/integration_overleaf/api/overleaf')
 	const req = {
-		fileIds: [node.id],
+		fileIds: [node.fileid],
 	}
 	const response = await axios.post(url, req)
 	console.error(response.data)
