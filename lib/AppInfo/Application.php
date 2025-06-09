@@ -16,6 +16,8 @@ use OCP\Util;
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'integration_overleaf';
 
+	public const DEFAULT_OVERLEAF_SERVER = 'https://www.overleaf.com';
+
 	/** @psalm-suppress PossiblyUnusedMethod */
 	public function __construct() {
 		parent::__construct(self::APP_ID);

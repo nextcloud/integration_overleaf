@@ -15,4 +15,7 @@
 	<dependencies>
 		<nextcloud min-version="29" max-version="32"/>
 	</dependencies>
+	<settings>
+		<admin>OCA\OpenAi\Settings\Admin</admin>
+	</settings>
 </info>

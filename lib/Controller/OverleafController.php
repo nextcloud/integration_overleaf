@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace OCA\Overleaf\Controller;
 
-use OCA\Overleaf\Services\OverleafService;
+use OCA\Overleaf\Service\OverleafService;
+use OCA\Overleaf\Service\OverleafSettingsService;
 use OCP\AppFramework\Http;
 use OCP\AppFramework\Http\Attribute\ApiRoute;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
@@ -21,6 +22,7 @@ class OverleafController extends OCSController {
 		string $appName,
 		IRequest $request,
 		private OverleafService $overleafService,
+		private OverleafSettingsService $overleafSettingsService,
 		private ?string $userId,
 	) {
 		parent::__construct($appName, $request);
@@ -29,7 +31,7 @@ class OverleafController extends OCSController {
 	 * Generate an Overleaf link with all required shares for the given fileIds to be opened in Overleaf
 	 *
 	 * @param list<int> $fileIds File ids to pass into the Overleaf link
-	 * @return DataResponse<Http::STATUS_OK, array{message: string}, array{}>
+	 * @return DataResponse<Http::STATUS_OK, string, array{}>
 	 *
 	 * 200: Data Returned
 	 */
@@ -37,28 +39,36 @@ class OverleafController extends OCSController {
 	#[ApiRoute(verb: 'POST', url: '/api/overleaf')]
 	public function getOverleaf(array $fileIds): DataResponse {
 		if ($this->userId === null) {
-			return new DataResponse(
-				[
-					'message' => 'No user id found',
-				],
-				Http::STATUS_UNAUTHORIZED,
-			);
+			return new DataResponse('', Http::STATUS_BAD_REQUEST);
 		}
 		try {
 			$url = $this->overleafService->generateOverleafUrl($fileIds, $this->userId);
 			return new DataResponse(
-				[
-					'message' => $url,
-				],
+				$url,
 				Http::STATUS_OK,
 			);
 		} catch (\Exception $e) {
 			return new DataResponse(
-				[
-					'message' => $e->getMessage(),
-				],
+				$e->getMessage(),
 				Http::STATUS_INTERNAL_SERVER_ERROR,
 			);
 		}
+	}
+	/**
+	 * Update config for Overleaf server
+	 *
+	 * @param list<int> $overleafServer The url of the Overleaf server
+	 * @return DataResponse<Http::STATUS_OK, string, array{}>
+	 *
+	 * 200: Empty response
+	 */
+	#[NoAdminRequired]
+	#[ApiRoute(verb: 'POST', url: '/api/admin-config')]
+	public function overleafAdminConfig(string $overleafServer): DataResponse {
+		$this->overleafSettingsService->setOverleafServer($overleafServer);
+		return new DataResponse(
+			'',
+			Http::STATUS_OK,
+		);
 	}
 }

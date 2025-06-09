@@ -1,6 +1,6 @@
 <?php
 
-namespace OCA\Overleaf\Services;
+namespace OCA\Overleaf\Service;
 
 use DateTime;
 use Exception;
