@@ -5,7 +5,7 @@
 	<name>Overleaf</name>
 	<summary>Integration of overleaf</summary>
 	<description>App to edit latex files using overleaf.</description>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<licence>agpl</licence>
 	<author mail="lukas@lschaefer.xyz" homepage="https://github.com/lukasdotcom">Lukas Schaefer</author>
 	<namespace>Overleaf</namespace>
@@ -16,6 +16,6 @@
 		<nextcloud min-version="29" max-version="32"/>
 	</dependencies>
 	<settings>
-		<admin>OCA\OpenAi\Settings\Admin</admin>
+		<admin>OCA\Overleaf\Settings\Admin</admin>
 	</settings>
 </info>
