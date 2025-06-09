@@ -21,7 +21,7 @@ class OverleafController extends OCSController {
 		string $appName,
 		IRequest $request,
 		private OverleafService $overleafService,
-		private ?string $userId
+		private ?string $userId,
 	) {
 		parent::__construct($appName, $request);
 	}

@@ -5,14 +5,12 @@ declare(strict_types=1);
 namespace OCA\Overleaf\AppInfo;
 
 use Closure;
-use OCA\Overleaf\Listener\LoadAdditionalScriptsListener;
 use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\Collaboration\Resources\LoadAdditionalScriptsEvent;
 use OCP\EventDispatcher\IEventDispatcher;
-use OCP\IUserSession;
 use OCP\Util;
 
 class Application extends App implements IBootstrap {
