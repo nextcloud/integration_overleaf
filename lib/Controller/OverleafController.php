@@ -30,19 +30,19 @@ class OverleafController extends OCSController {
 	/**
 	 * Generate an Overleaf link with all required shares for the given fileIds to be opened in Overleaf
 	 *
-	 * @param list<int> $fileIds File ids to pass into the Overleaf link
+	 * @param list<int> $fileId File id to pass into the Overleaf link
 	 * @return DataResponse<Http::STATUS_OK, string, array{}>
 	 *
 	 * 200: Data Returned
 	 */
 	#[NoAdminRequired]
 	#[ApiRoute(verb: 'POST', url: '/api/overleaf')]
-	public function getOverleaf(array $fileIds): DataResponse {
+	public function getOverleaf(string $fileId): DataResponse {
 		if ($this->userId === null) {
 			return new DataResponse('', Http::STATUS_BAD_REQUEST);
 		}
 		try {
-			$url = $this->overleafService->generateOverleafUrl($fileIds, $this->userId);
+			$url = $this->overleafService->generateOverleafUrl($fileId, $this->userId);
 			return new DataResponse(
 				$url,
 				Http::STATUS_OK,
