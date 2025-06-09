@@ -54,6 +54,8 @@ class OverleafService {
 					'/public.php/dav/files/' . $token
 				);
 				$overleafUrl .= 'snip_url[]=' . $linkUrl . '&';
+			} else {
+				throw new Exception('File not found');
 			}
 		}
 		// Remove the last '&'
