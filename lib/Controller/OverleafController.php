@@ -63,7 +63,7 @@ class OverleafController extends OCSController {
 	 * 200: Empty response
 	 */
 	#[NoAdminRequired]
-	#[ApiRoute(verb: 'POST', url: '/api/admin-config')]
+	#[ApiRoute(verb: 'PUT', url: '/api/admin-config')]
 	public function overleafAdminConfig(string $overleafServer): DataResponse {
 		$this->overleafSettingsService->setOverleafServer($overleafServer);
 		return new DataResponse(

@@ -10,6 +10,7 @@ const isDev = buildMode === 'development'
 
 webpackConfig.entry = {
 	filesplugin: { import: path.join(__dirname, 'src', 'filesplugin.js'), filename: appId + '-filesplugin.js' },
+	adminSettings: { import: path.join(__dirname, 'src', 'adminSettings.js'), filename: appId + '-adminSettings.js' },
 }
 
 webpackConfig.plugins.push(

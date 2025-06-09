@@ -5,7 +5,7 @@
 	<name>Overleaf</name>
 	<summary>Integration of overleaf</summary>
 	<description>App to edit latex files using overleaf.</description>
-	<version>1.0.1</version>
+	<version>1.0.0</version>
 	<licence>agpl</licence>
 	<author mail="lukas@lschaefer.xyz" homepage="https://github.com/lukasdotcom">Lukas Schaefer</author>
 	<namespace>Overleaf</namespace>
@@ -17,5 +17,6 @@
 	</dependencies>
 	<settings>
 		<admin>OCA\Overleaf\Settings\Admin</admin>
+		<admin-section>OCA\Overleaf\Settings\AdminSection</admin-section>
 	</settings>
 </info>

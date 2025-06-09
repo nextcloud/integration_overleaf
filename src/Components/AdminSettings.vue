@@ -23,6 +23,8 @@
 import NcTextField from '@nextcloud/vue/dist/Components/NcTextField.js'
 import {loadState} from '@nextcloud/initial-state'
 import debounce from 'debounce'
+import {generateOcsUrl} from "@nextcloud/router";
+import axios from "@nextcloud/axios";
 
 
 export default {
@@ -45,6 +47,11 @@ export default {
 			}
 			await this.saveOptions(values, false)
 		}, 2000),
+		async saveOptions(values) {
+			const url = generateOcsUrl('/apps/integration_overleaf/api/admin-config')
+			await axios.put(url, values)
+
+		}
 	},
 }
 </script>
