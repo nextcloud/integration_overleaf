@@ -1,17 +1,17 @@
 {
-	"name": "nextcloud/app_template",
-	"description": "An example description",
+	"name": "nextcloud/integration_overleaf",
+	"description": "Nextcloud integration with Overleaf",
 	"license": "AGPL-3.0-or-later",
 	"authors": [
 		{
-			"name": "example",
-			"email": "example@example.com",
-			"homepage": "https://example.com"
+			"name": "Lukas Schaefer",
+			"email": "lukas@lschaefer.xyz",
+			"homepage": "https://github.com/lukasdotcom"
 		}
 	],
 	"autoload": {
 		"psr-4": {
-			"OCA\\AppTemplate\\": "lib/"
+			"OCA\\IntegrationOverleaf\\": "lib/"
 		}
 	},
 	"scripts": {

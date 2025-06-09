@@ -1,26 +1,18 @@
 <?xml version="1.0"?>
 <info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
-	<id>app_template</id>
-	<name>App Template</name>
-	<summary>An example summary</summary>
-	<description>An example description</description>
+	<id>integration_overleaf</id>
+	<name>Overleaf</name>
+	<summary>Integration of overleaf</summary>
+	<description>App to edit latex files using overleaf.</description>
 	<version>1.0.0</version>
 	<licence>agpl</licence>
-	<author mail="example@example.com" homepage="https://example.com">Example</author>
-	<namespace>AppTemplate</namespace>
-	<category>customization</category>
-	<bugs>https://example.com/bugs</bugs>
+	<author mail="lukas@lschaefer.xyz" homepage="github.com/lukasdotcom">Lukas Schaefer</author>
+	<namespace>Overleaf</namespace>
+	<category>integration</category>
+	<category>office</category>
+	<bugs>https://github.com/lukasdotcom/integration_overleaf</bugs>
 	<dependencies>
-		<nextcloud min-version="29" max-version="31"/>
+		<nextcloud min-version="29" max-version="32"/>
 	</dependencies>
-	<navigations>
-		<navigation>
-			<id>app_template</id>
-			<name>App Template</name>
-			<route>app_template.page.index</route>
-			<icon>app.svg</icon>
-			<type>link</type>
-		</navigation>
-	</navigations>
 </info>

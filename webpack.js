@@ -3,14 +3,20 @@ const ESLintPlugin = require('eslint-webpack-plugin')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 const path = require('path')
 
+const appId = 'integration_overleaf'
+const buildMode = process.env.NODE_ENV
+const isDev = buildMode === 'development'
+
+
 webpackConfig.entry = {
-	main: { import: path.join(__dirname, 'src', 'main.js'), filename: 'main.js' },
+	filesplugin: { import: path.join(__dirname, 'src', 'filesplugin.js'), filename: appId + '-filesplugin.js' },
 }
 
 webpackConfig.plugins.push(
 	new ESLintPlugin({
 		extensions: ['js', 'vue'],
 		files: 'src',
+		failOnError: !isDev,
 	}),
 )
 webpackConfig.plugins.push(
