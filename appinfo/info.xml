@@ -11,7 +11,7 @@
 	<namespace>Overleaf</namespace>
 	<category>integration</category>
 	<category>office</category>
-	<bugs>https://github.com/lukasdotcom/integration_overleaf</bugs>
+	<bugs>https://github.com/nextcloud/integration_overleaf</bugs>
 	<dependencies>
 		<nextcloud min-version="29" max-version="32"/>
 	</dependencies>
