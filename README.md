@@ -1,25 +1,27 @@
-# App Template
+# Overleaf integration for Nextcloud
 
-A template to get started with Nextcloud app development.
+This integration allows you to open LaTeX files directly in Overleaf from your Nextcloud Files interface, making it easy to edit and collaborate on LaTeX documents.
 
-## Usage
+## ✨ Features
 
-- To get started easily use the [Appstore App generator](https://apps.nextcloud.com/developer/apps/generate) to
-  dynamically generate an App based on this repository with all the constants prefilled.
-- Alternatively you can use the "Use this template" button on the top of this page to create a new repository based on
-  this repository. Afterwards adjust all the necessary constants like App ID, namespace, descriptions etc.
+- Open LaTeX files in Overleaf with a single click
+- Seamless integration with Nextcloud Files
+- Supports both self-hosted and cloud Overleaf instances
+- Secure file sharing with read-only access for Overleaf
 
-Once your app is ready follow the [instructions](https://nextcloudappstore.readthedocs.io/en/latest/developer.html) to
-upload it to the Appstore.
+### Usage
 
-## Resources
+1. Select a `.tex` file in Nextcloud files
+2. Click the three-dot menu and choose "Open in Overleaf"
 
-### Documentation for developers:
+The file will be automatically shared with Overleaf using a secure, time-limited link. Note that modifying the file in Overleaf will not update the file in Nextcloud.
 
-- General documentation and tutorials: https://nextcloud.com/developer
-- Technical documentation: https://docs.nextcloud.com/server/latest/developer_manual
+## 🔧 Configuration
 
-### Help for developers:
+### Admin settings
 
-- Official community chat: https://cloud.nextcloud.com/call/xs25tz5y
-- Official community forum: https://help.nextcloud.com/c/dev/11
+Admins can configure the Overleaf server URL in the admin settings under Connected accounts. By default, it points to `https://www.overleaf.com`.
+
+## 📄 License
+
+This project is licensed under the AGPL-3.0-or-later. See the [LICENSE](LICENSE) file for details.

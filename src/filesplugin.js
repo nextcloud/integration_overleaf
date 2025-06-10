@@ -3,6 +3,7 @@ import {
 } from '@nextcloud/files'
 import {generateOcsUrl} from '@nextcloud/router'
 import axios from '@nextcloud/axios'
+import OverleafLogoSVG from '../img/app-no-color.svg?raw'
 
 const sendAction = new FileAction({
 	id: 'overleafOpen',
@@ -15,7 +16,7 @@ const sendAction = new FileAction({
 			&& nodes.every(({ type }) => type === FileType.File)
 			&& nodes.every(({ mime }) => mime === 'application/x-tex' || mime === 'application/zip')
 	},
-	iconSvgInline: () => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">',
+	iconSvgInline: () => OverleafLogoSVG,
 	async exec(node) {
 		await openInOverleaf(node)
 		return null
