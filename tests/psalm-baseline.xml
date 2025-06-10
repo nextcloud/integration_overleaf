@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
+	<file src="lib/Controller/OverleafController.php">
+		<InvalidReturnStatement>
+			<code><![CDATA[new DataResponse(
+				$e->getMessage(),
+				Http::STATUS_INTERNAL_SERVER_ERROR,
+			)]]></code>
+			<code><![CDATA[new DataResponse('', Http::STATUS_BAD_REQUEST)]]></code>
+		</InvalidReturnStatement>
+		<InvalidReturnType>
+			<code><![CDATA[DataResponse<Http::STATUS_OK, string, array{}>]]></code>
+		</InvalidReturnType>
+	</file>
 	<file src="lib/Service/OverleafService.php">
 		<MissingDependency>
 			<code><![CDATA[$this->root]]></code>

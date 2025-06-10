@@ -32,7 +32,7 @@ class OverleafController extends OCSController {
 	 * Generate an Overleaf link with all required shares for the given fileIds to be opened in Overleaf
 	 *
 	 * @param int $fileId File id to pass into the Overleaf link
-	 * @return DataResponse<Http::STATUS_OK|400|500, string, array<never, never>>
+	 * @return DataResponse<Http::STATUS_OK, string, array{}>
 	 *
 	 * 200: Data Returned
 	 */

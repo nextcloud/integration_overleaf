@@ -73,12 +73,9 @@
                                 ],
                                 "properties": {
                                     "fileId": {
-                                        "type": "array",
-                                        "description": "File id to pass into the Overleaf link",
-                                        "items": {
-                                            "type": "integer",
-                                            "format": "int64"
-                                        }
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "description": "File id to pass into the Overleaf link"
                                     }
                                 }
                             }
@@ -157,12 +154,8 @@
                                 ],
                                 "properties": {
                                     "overleafServer": {
-                                        "type": "array",
-                                        "description": "The url of the Overleaf server",
-                                        "items": {
-                                            "type": "integer",
-                                            "format": "int64"
-                                        }
+                                        "type": "string",
+                                        "description": "The url of the Overleaf server"
                                     }
                                 }
                             }
