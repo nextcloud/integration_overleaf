@@ -1,8 +1,9 @@
 import {
 	registerFileAction, Permission, FileAction, FileType,
 } from '@nextcloud/files'
-import {generateOcsUrl} from '@nextcloud/router'
+import { generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
+// eslint-disable-next-line import/no-unresolved
 import OverleafLogoSVG from '../img/app-no-color.svg?raw'
 
 const sendAction = new FileAction({

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace OCA\Overleaf\Controller;
 
+use Exception;
 use OCA\Overleaf\Service\OverleafService;
 use OCA\Overleaf\Service\OverleafSettingsService;
 use OCP\AppFramework\Http;
@@ -30,7 +31,7 @@ class OverleafController extends OCSController {
 	/**
 	 * Generate an Overleaf link with all required shares for the given fileIds to be opened in Overleaf
 	 *
-	 * @param list<int> $fileId File id to pass into the Overleaf link
+	 * @param int $fileId File id to pass into the Overleaf link
 	 * @return DataResponse<Http::STATUS_OK, string, array{}>
 	 *
 	 * 200: Data Returned
@@ -47,7 +48,7 @@ class OverleafController extends OCSController {
 				$url,
 				Http::STATUS_OK,
 			);
-		} catch (\Exception $e) {
+		} catch (Exception $e) {
 			return new DataResponse(
 				$e->getMessage(),
 				Http::STATUS_INTERNAL_SERVER_ERROR,
@@ -57,7 +58,7 @@ class OverleafController extends OCSController {
 	/**
 	 * Update config for Overleaf server
 	 *
-	 * @param list<int> $overleafServer The url of the Overleaf server
+	 * @param string $overleafServer The url of the Overleaf server
 	 * @return DataResponse<Http::STATUS_OK, string, array{}>
 	 *
 	 * 200: Empty response

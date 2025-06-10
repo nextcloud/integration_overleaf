@@ -69,16 +69,13 @@
                             "schema": {
                                 "type": "object",
                                 "required": [
-                                    "fileIds"
+                                    "fileId"
                                 ],
                                 "properties": {
-                                    "fileIds": {
-                                        "type": "array",
-                                        "description": "File ids to pass into the Overleaf link",
-                                        "items": {
-                                            "type": "integer",
-                                            "format": "int64"
-                                        }
+                                    "fileId": {
+                                        "type": "integer",
+                                        "format": "int64",
+                                        "description": "File id to pass into the Overleaf link"
                                     }
                                 }
                             }
@@ -132,7 +129,7 @@
             }
         },
         "/ocs/v2.php/apps/integration_overleaf/api/admin-config": {
-            "post": {
+            "put": {
                 "operationId": "overleaf-overleaf-admin-config",
                 "summary": "Update config for Overleaf server",
                 "tags": [
@@ -157,12 +154,8 @@
                                 ],
                                 "properties": {
                                     "overleafServer": {
-                                        "type": "array",
-                                        "description": "The url of the Overleaf server",
-                                        "items": {
-                                            "type": "integer",
-                                            "format": "int64"
-                                        }
+                                        "type": "string",
+                                        "description": "The url of the Overleaf server"
                                     }
                                 }
                             }
