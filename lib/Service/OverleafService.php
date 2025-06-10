@@ -27,7 +27,7 @@ class OverleafService {
 	/**
 	 * Generate Overleaf URL
 	 *
-	 * @param int $fileIds
+	 * @param int $fileId
 	 * @param string $userId
 	 * @return string
 	 * @throws NotPermittedException
