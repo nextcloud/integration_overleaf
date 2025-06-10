@@ -14,18 +14,17 @@
 				:value.sync="overleaf_server"
 				:label="t('integration_overleaf', 'Overleaf Server URL')"
 				:placeholder="t('integration_overleaf', 'https://overleaf.com')"
-				@update:value="onInput()"/>
+				@update:value="onInput()" />
 		</div>
 	</div>
 </template>
 
 <script>
 import NcTextField from '@nextcloud/vue/dist/Components/NcTextField.js'
-import {loadState} from '@nextcloud/initial-state'
+import { loadState } from '@nextcloud/initial-state'
 import debounce from 'debounce'
-import {generateOcsUrl} from "@nextcloud/router";
-import axios from "@nextcloud/axios";
-
+import { generateOcsUrl } from '@nextcloud/router'
+import axios from '@nextcloud/axios'
 
 export default {
 	name: 'AdminSettings',
@@ -41,7 +40,7 @@ export default {
 	},
 
 	methods: {
-		onInput: debounce(async function () {
+		onInput: debounce(async function() {
 			const values = {
 				overleafServer: this.overleaf_server,
 			}
@@ -51,7 +50,7 @@ export default {
 			const url = generateOcsUrl('/apps/integration_overleaf/api/admin-config')
 			await axios.put(url, values)
 
-		}
+		},
 	},
 }
 </script>

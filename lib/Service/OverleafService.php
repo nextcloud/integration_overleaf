@@ -13,16 +13,14 @@ use OCP\IURLGenerator;
 use OCP\Share\IManager as ShareManager;
 use OCP\Share\IShare;
 
-class OverleafService
-{
+class OverleafService {
 	public function __construct(
-		IClientService                  $clientService,
-		private IRootFolder             $root,
-		private ShareManager            $shareManager,
-		private IURLGenerator           $urlGenerator,
-		private OverleafSettingsService $overleafSettingsService
-	)
-	{
+		IClientService $clientService,
+		private IRootFolder $root,
+		private ShareManager $shareManager,
+		private IURLGenerator $urlGenerator,
+		private OverleafSettingsService $overleafSettingsService,
+	) {
 		$this->client = $clientService->newClient();
 	}
 
@@ -35,8 +33,7 @@ class OverleafService
 	 * @throws NotPermittedException
 	 * @throws Exception
 	 */
-	public function generateOverleafUrl(int $fileId, string $userId)
-	{
+	public function generateOverleafUrl(int $fileId, string $userId) {
 		// Link should not be needed for very long due to only being read once by overleaf.
 		$expirationDate = new DateTime('now + 25 hours');
 		$overleafUrl = $this->overleafSettingsService->getOverleafServer();
