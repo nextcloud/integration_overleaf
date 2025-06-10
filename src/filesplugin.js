@@ -3,6 +3,7 @@ import {
 } from '@nextcloud/files'
 import { generateOcsUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
+// eslint-disable-next-line import/no-unresolved
 import OverleafLogoSVG from '../img/app-no-color.svg?raw'
 
 const sendAction = new FileAction({

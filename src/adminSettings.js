@@ -4,6 +4,7 @@
  */
 
 import Vue from 'vue'
+// eslint-disable-next-line import/no-unresolved,n/no-missing-import
 import AdminSettings from './components/AdminSettings.vue'
 Vue.mixin({ methods: { t, n } })
 
