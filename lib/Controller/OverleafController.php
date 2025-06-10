@@ -37,7 +37,7 @@ class OverleafController extends OCSController {
 	 */
 	#[NoAdminRequired]
 	#[ApiRoute(verb: 'POST', url: '/api/overleaf')]
-	public function getOverleaf(string $fileId): DataResponse {
+	public function getOverleaf(int $fileId): DataResponse {
 		if ($this->userId === null) {
 			return new DataResponse('', Http::STATUS_BAD_REQUEST);
 		}

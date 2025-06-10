@@ -29,19 +29,20 @@ class OverleafService
 	/**
 	 * Generate Overleaf URL
 	 *
-	 * @param array $fileIds
+	 * @param int $fileIds
 	 * @param string $userId
 	 * @return string
 	 * @throws NotPermittedException
+	 * @throws Exception
 	 */
-	public function generateOverleafUrl(string $fileId, string $userId)
+	public function generateOverleafUrl(int $fileId, string $userId)
 	{
 		// Link should not be needed for very long due to only being read once by overleaf.
 		$expirationDate = new DateTime('now + 25 hours');
 		$overleafUrl = $this->overleafSettingsService->getOverleafServer();
 		$userFolder = $this->root->getUserFolder($userId);
 		$nodes = $userFolder->getById($fileId);
-		if (count($nodes) == 0 && ($nodes[0] instanceof File)) {
+		if (count($nodes) > 0 && ($nodes[0] instanceof File)) {
 			$node = $nodes[0];
 			$share = $this->shareManager->newShare();
 			$share->setNode($node);
@@ -56,7 +57,7 @@ class OverleafService
 			$linkUrl = $this->urlGenerator->getAbsoluteURL(
 				'/public.php/dav/files/' . $token
 			);
-			$overleafUrl .= 'snip_uri[]=' . $linkUrl;
+			$overleafUrl .= '?snip_uri=' . $linkUrl;
 		} else {
 			throw new Exception('File not found');
 		}
