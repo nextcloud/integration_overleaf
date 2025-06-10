@@ -69,12 +69,12 @@
                             "schema": {
                                 "type": "object",
                                 "required": [
-                                    "fileIds"
+                                    "fileId"
                                 ],
                                 "properties": {
-                                    "fileIds": {
+                                    "fileId": {
                                         "type": "array",
-                                        "description": "File ids to pass into the Overleaf link",
+                                        "description": "File id to pass into the Overleaf link",
                                         "items": {
                                             "type": "integer",
                                             "format": "int64"
@@ -132,7 +132,7 @@
             }
         },
         "/ocs/v2.php/apps/integration_overleaf/api/admin-config": {
-            "post": {
+            "put": {
                 "operationId": "overleaf-overleaf-admin-config",
                 "summary": "Update config for Overleaf server",
                 "tags": [
