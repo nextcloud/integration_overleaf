@@ -35,5 +35,5 @@ async function openInOverleaf(node) {
 		fileId: node.fileid,
 	}
 	const response = await axios.post(url, req)
-	window.location.replace(response.data.ocs.data)
+	window.open(response.data.ocs.data, '_blank')
 }
