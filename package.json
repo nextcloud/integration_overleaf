@@ -10,8 +10,10 @@
     "build": "vite build",
     "dev": "vite --mode development build",
     "watch": "vite --mode development build --watch",
-    "lint": "eslint src",
-    "stylelint": "stylelint src/**/*.vue src/**/*.scss src/**/*.css"
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "stylelint": "stylelint src/**/*.vue src/**/*.scss src/**/*.css",
+    "stylelint:fix": "stylelint src/**/*.vue src/**/*.scss src/**/*.css --fix"
   },
   "type": "module",
   "browserslist": [
@@ -31,6 +33,8 @@
     "@nextcloud/eslint-config": "^8.4.2",
     "@nextcloud/stylelint-config": "^3.1.0",
     "@nextcloud/vite-config": "^1.5.2",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^5.3.1",
     "vite": "^6.3.5"
   }
 }

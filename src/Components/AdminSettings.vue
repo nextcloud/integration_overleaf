@@ -54,3 +54,9 @@ export default {
 	},
 }
 </script>
+
+<style lang="scss" scoped>
+#overleaf-content {
+	width: 400px;
+}
+</style>
