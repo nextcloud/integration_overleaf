@@ -7,17 +7,17 @@ namespace OCA\Overleaf\Controller;
 use Exception;
 use OCA\Overleaf\Service\OverleafService;
 use OCA\Overleaf\Service\OverleafSettingsService;
+use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http;
-use OCP\AppFramework\Http\Attribute\ApiRoute;
 use OCP\AppFramework\Http\Attribute\NoAdminRequired;
+use OCP\AppFramework\Http\Attribute\Route;
 use OCP\AppFramework\Http\DataResponse;
-use OCP\AppFramework\OCSController;
 use OCP\IRequest;
 
 /**
  * @psalm-suppress UnusedClass
  */
-class OverleafController extends OCSController {
+class OverleafController extends Controller {
 
 	public function __construct(
 		string $appName,
@@ -37,7 +37,7 @@ class OverleafController extends OCSController {
 	 * 200: Data Returned
 	 */
 	#[NoAdminRequired]
-	#[ApiRoute(verb: 'POST', url: '/api/overleaf')]
+	#[Route(type: Route::TYPE_FRONTPAGE, verb: 'POST', url: '/api/overleaf')]
 	public function getOverleaf(int $fileId): DataResponse {
 		if ($this->userId === null) {
 			return new DataResponse('', Http::STATUS_BAD_REQUEST);
@@ -64,7 +64,7 @@ class OverleafController extends OCSController {
 	 * 200: Empty response
 	 */
 	#[NoAdminRequired]
-	#[ApiRoute(verb: 'PUT', url: '/api/admin-config')]
+	#[Route(type: Route::TYPE_FRONTPAGE, verb: 'PUT', url: '/api/admin-config')]
 	public function overleafAdminConfig(string $overleafServer): DataResponse {
 		$this->overleafSettingsService->setOverleafServer($overleafServer);
 		return new DataResponse(
