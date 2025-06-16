@@ -54,7 +54,7 @@ class OverleafService {
 			$linkUrl = $this->urlGenerator->getAbsoluteURL(
 				'/public.php/dav/files/' . $token
 			);
-			$overleafUrl .= '?snip_uri=' . $linkUrl;
+			$overleafUrl .= '/docs?snip_uri=' . $linkUrl;
 		} else {
 			throw new Exception('File not found');
 		}
