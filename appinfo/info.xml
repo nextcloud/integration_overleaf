@@ -13,6 +13,7 @@
 	<category>office</category>
 	<bugs>https://github.com/nextcloud/integration_overleaf</bugs>
 	<screenshot>https://github.com/nextcloud/integration_overleaf/raw/main/img/screenshot.jpg</screenshot>
+	<screenshot>https://github.com/nextcloud/integration_overleaf/raw/main/img/screenshot2.jpg</screenshot>
 	<dependencies>
 		<nextcloud min-version="29" max-version="32"/>
 	</dependencies>
