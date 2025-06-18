@@ -1,6 +1,13 @@
 OC.L10N.register(
     "integration_overleaf",
     {
-    "Connected accounts" : "Sasaistītie konti"
+    "Connected accounts" : "Sasaistītie konti",
+    "Overleaf" : "Overleaf",
+    "Integration of overleaf" : "Overleaf iekļaušana",
+    "App to edit latex files using overleaf." : "Lietotne LaTeX datņu labošanai ar Overleaf",
+    "Overleaf integration" : "Overleaf iekļaušana",
+    "Overleaf Server URL" : "Overleaf servera URL",
+    "https://overleaf.com" : "https://overleaf.com",
+    "Open file in Overleaf" : "Atvērt datni ar Overleaf"
 },
 "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2);");
