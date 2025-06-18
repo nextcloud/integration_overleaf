@@ -13,7 +13,7 @@
 				class="input"
 				:value.sync="overleaf_server"
 				:label="t('integration_overleaf', 'Overleaf Server URL')"
-				:placeholder="t('integration_overleaf', 'https://overleaf.com')"
+				placeholder="https://overleaf.com"
 				@update:value="onInput()" />
 		</div>
 	</div>
