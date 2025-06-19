@@ -3,11 +3,8 @@ OC.L10N.register(
     {
     "Connected accounts" : "Verbundene Konten",
     "Overleaf" : "Overleaf",
-    "Integration of overleaf" : "Integration von Overleaf",
-    "App to edit latex files using overleaf." : "App zum Bearbeiten von Latex-Dateien mit Overleaf",
     "Overleaf integration" : "Integration von Overleaf",
     "Overleaf Server URL" : "Overleaf Server-URL",
-    "https://overleaf.com" : "https://overleaf.com\n ",
     "Open file in Overleaf" : "Öffne Datei in Overleaf"
 },
 "nplurals=2; plural=(n != 1);");

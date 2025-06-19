@@ -3,11 +3,8 @@ OC.L10N.register(
     {
     "Connected accounts" : "Ühendatud kasutajakontod",
     "Overleaf" : "Overleaf",
-    "Integration of overleaf" : "Overleafi veebiteenuse lõiming",
-    "App to edit latex files using overleaf." : "Rakendus LaTexi failide koostamiseks Overleafi veebiteenuses.",
     "Overleaf integration" : "Overleafi lõiming",
     "Overleaf Server URL" : "Overleafi serveri võrguaadress",
-    "https://overleaf.com" : "https://overleaf.com",
     "Open file in Overleaf" : "Ava fail Overleafis"
 },
 "nplurals=2; plural=(n != 1);");
