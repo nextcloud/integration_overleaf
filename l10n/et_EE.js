@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Connected accounts" : "Ühendatud kasutajakontod",
     "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Overleafi veebiteenuse lõiming",
+    "App to edit LaTeX files using Overleaf." : "Rakendus LaTexi failide koostamiseks Overleafi veebiteenuses.",
     "Overleaf integration" : "Overleafi lõiming",
     "Overleaf Server URL" : "Overleafi serveri võrguaadress",
     "Open file in Overleaf" : "Ava fail Overleafis"

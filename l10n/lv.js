@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Connected accounts" : "Sasaistītie konti",
     "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Overleaf iekļaušana",
+    "App to edit LaTeX files using Overleaf." : "Lietotne LaTeX datņu labošanai ar Overleaf.",
     "Overleaf integration" : "Overleaf iekļaušana",
     "Overleaf Server URL" : "Overleaf servera URL",
     "Open file in Overleaf" : "Atvērt datni ar Overleaf"

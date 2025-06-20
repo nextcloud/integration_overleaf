@@ -3,6 +3,8 @@ OC.L10N.register(
     {
     "Connected accounts" : "Повезани налози",
     "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Интеграција Overleaf сервиса",
+    "App to edit LaTeX files using Overleaf." : "Апликација за уређивање latex фајлова помоћу Overleaf сервиса.",
     "Overleaf integration" : "Overleaf интеграција",
     "Overleaf Server URL" : "URL Overleaf сервера",
     "Open file in Overleaf" : "Отвори фајл у Overleaf"
