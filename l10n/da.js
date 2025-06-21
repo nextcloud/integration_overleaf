@@ -5,6 +5,6 @@ OC.L10N.register(
     "Overleaf" : "Overleaf",
     "Overleaf integration" : "Overleaf integration",
     "Overleaf Server URL" : "Overleaf Server URL",
-    "Open file in Overleaf" : "Åben fil i Overleaf"
+    "Open file in Overleaf" : "Åbn fil i Overleaf"
 },
 "nplurals=2; plural=(n != 1);");
