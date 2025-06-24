@@ -11,16 +11,16 @@
 			<NcTextField
 				id="overleaf-server"
 				class="input"
-				:value.sync="overleaf_server"
+				:model-value="overleaf_server"
 				:label="t('integration_overleaf', 'Overleaf Server URL')"
 				placeholder="https://overleaf.com"
-				@update:value="onInput()" />
+				@update:model-value="onInput()" />
 		</div>
 	</div>
 </template>
 
 <script>
-import NcTextField from '@nextcloud/vue/dist/Components/NcTextField.js'
+import NcTextField from '@nextcloud/vue/components/NcTextField'
 import { loadState } from '@nextcloud/initial-state'
 import debounce from 'debounce'
 import { generateUrl } from '@nextcloud/router'

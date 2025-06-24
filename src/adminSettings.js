@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-import Vue from 'vue'
-// eslint-disable-next-line import/no-unresolved,n/no-missing-import
+import { createApp } from 'vue'
 import AdminSettings from './Components/AdminSettings.vue'
-Vue.mixin({ methods: { t, n } })
+import { translate as t, translatePlural as n } from '@nextcloud/l10n'
 
-const View = Vue.extend(AdminSettings)
-new View().$mount('#overleaf_prefs')
+const app = createApp(AdminSettings)
+app.mixin({ methods: { t, n } })
+app.mount('#overleaf_prefs')

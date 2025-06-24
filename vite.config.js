@@ -6,8 +6,8 @@ const isProduction = process.env.NODE_ENV === 'production'
 
 export default createAppConfig(
 	{
-		filesplugin: resolve(join('src', 'filesplugin.js')),
-		adminSettings: resolve(join('src', 'adminSettings.js')),
+		filesplugin: join('src', 'filesplugin.js'),
+		adminSettings: join('src', 'adminSettings.js'),
 	}, {
 		config: {
 			css: {
