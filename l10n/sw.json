@@ -1,4 +1,6 @@
 { "translations": {
-    "Connected accounts" : "Akaunti zilizounganishwa"
+    "Connected accounts" : "Akaunti zilizounganishwa",
+    "Overleaf" : "Mbele",
+    "Open file in Overleaf" : "Fungua faili katika Overleaf"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
