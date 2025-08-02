@@ -1,4 +1,5 @@
 { "translations": {
-    "Connected accounts" : "Anslutna konton"
+    "Connected accounts" : "Anslutna konton",
+    "Open file in Overleaf" : "Öppna fil i Overleaf"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
