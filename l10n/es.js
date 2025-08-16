@@ -1,6 +1,12 @@
 OC.L10N.register(
     "integration_overleaf",
     {
-    "Connected accounts" : "Cuentas conectadas"
+    "Connected accounts" : "Cuentas conectadas",
+    "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Integración de Overleaf",
+    "App to edit LaTeX files using Overleaf." : "App para editar archivos LaTeX usando Overleaf.",
+    "Overleaf integration" : "Integración con Overleaf",
+    "Overleaf Server URL" : "URL del servidor Overleaf",
+    "Open file in Overleaf" : "Abrir archivo en Overleaf"
 },
 "nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;");
