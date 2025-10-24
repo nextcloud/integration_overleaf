@@ -18,9 +18,9 @@ class OverleafSettingsService {
 	}
 
 	public function getOverleafServer(): string {
-		return $this->appConfig->getValueString(Application::APP_ID, 'overleaf_server') ?: Application::DEFAULT_OVERLEAF_SERVER;
+		return $this->appConfig->getValueString(Application::APP_ID, 'overleaf_server', lazy: true) ?: Application::DEFAULT_OVERLEAF_SERVER;
 	}
 	public function setOverleafServer(string $server): void {
-		$this->appConfig->setValueString(Application::APP_ID, 'overleaf_server', $server);
+		$this->appConfig->setValueString(Application::APP_ID, 'overleaf_server', $server, lazy: true);
 	}
 }
