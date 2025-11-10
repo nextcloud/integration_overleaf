@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.1.0 - 2025-11-10
+
+### Added
+
+- Upgrade to Vue 3 @lukasdotcom [#21](https://github.com/nextcloud/integration_overleaf/pull/21)
+- Add support for Nextcloud 33 and use lazy loading for config @lukasdotcom [#22](https://github.com/nextcloud/integration_overleaf/pull/22)
+
+### Changed
+
+- Remove url from translations @rakekniven [#16](https://github.com/nextcloud/integration_overleaf/pull/16)
+- Improve grammar for translations @rakekniven [#14](https://github.com/nextcloud/integration_overleaf/pull/14)
+
 ## 1.0.2 - 2025-06-16
 
 ### Fixed

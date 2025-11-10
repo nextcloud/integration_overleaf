@@ -5,7 +5,7 @@
 	<name>Overleaf</name>
 	<summary>Integration of Overleaf</summary>
 	<description>App to edit LaTeX files using Overleaf.</description>
-	<version>1.0.2</version>
+	<version>1.1.0</version>
 	<licence>agpl</licence>
 	<author mail="lukas@lschaefer.xyz" homepage="https://github.com/lukasdotcom">Lukas Schaefer</author>
 	<namespace>Overleaf</namespace>
