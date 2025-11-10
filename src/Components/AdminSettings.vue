@@ -10,8 +10,8 @@
 		<div id="overleaf-content">
 			<NcTextField
 				id="overleaf-server"
+				v-model="overleaf_server"
 				class="input"
-				:model-value="overleaf_server"
 				:label="t('integration_overleaf', 'Overleaf Server URL')"
 				placeholder="https://overleaf.com"
 				@update:model-value="onInput()" />
