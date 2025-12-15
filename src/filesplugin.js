@@ -8,21 +8,21 @@ import OverleafLogoSVG from '../img/app-no-color.svg?raw'
 
 const sendAction = new FileAction({
 	id: 'overleafOpen',
-	displayName: (nodes) => {
+	displayName: () => {
 		return t('integration_overleaf', 'Open file in Overleaf')
 	},
-	enabled(nodes, view) {
+	enabled({ nodes, view }) {
 		return nodes.length === 1
 			&& !nodes.some(({ permissions }) => (permissions & Permission.READ) === 0)
 			&& nodes.every(({ type }) => type === FileType.File)
 			&& nodes.every(({ mime }) => mime === 'application/x-tex' || mime === 'application/zip')
 	},
 	iconSvgInline: () => OverleafLogoSVG,
-	async exec(node) {
-		await openInOverleaf(node)
+	async exec({ nodes }) {
+		await openInOverleaf(nodes[0])
 		return null
 	},
-	async execBatch(nodes) {
+	async execBatch({ nodes }) {
 		await openInOverleaf(nodes[0])
 		return nodes.map(_ => null)
 	},
