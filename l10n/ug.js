@@ -1,6 +1,12 @@
 OC.L10N.register(
     "integration_overleaf",
     {
-    "Connected accounts" : "ئۇلانغان ھېساباتلار"
+    "Connected accounts" : "ئۇلانغان ھېساباتلار",
+    "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Overleaf بىرلەشتۈرۈش",
+    "App to edit LaTeX files using Overleaf." : "Overleaf ئارقىلىق LaTeX ھۆججەتلىرىنى تەھرىرلەيدىغان ئەپ",
+    "Overleaf integration" : "Overleaf بىرلەشتۈرۈش",
+    "Overleaf Server URL" : "Overleaf مۇلازىمېتىر URL",
+    "Open file in Overleaf" : "ھۆججەتنى Overleaf دە ئاچ"
 },
 "nplurals=2; plural=(n != 1);");
