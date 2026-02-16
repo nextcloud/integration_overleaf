@@ -1,12 +1,12 @@
 import {
-	registerFileAction, Permission, FileAction, FileType,
+	registerFileAction, Permission, FileType,
 } from '@nextcloud/files'
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 // eslint-disable-next-line import/no-unresolved
 import OverleafLogoSVG from '../img/app-no-color.svg?raw'
 
-const sendAction = new FileAction({
+const sendAction = {
 	id: 'overleafOpen',
 	displayName: () => {
 		return t('integration_overleaf', 'Open file in Overleaf')
@@ -26,7 +26,7 @@ const sendAction = new FileAction({
 		await openInOverleaf(nodes[0])
 		return nodes.map(_ => null)
 	},
-})
+}
 registerFileAction(sendAction)
 
 async function openInOverleaf(node) {
