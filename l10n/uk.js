@@ -4,7 +4,7 @@ OC.L10N.register(
     "Connected accounts" : "Підключені облікові записи",
     "Overleaf" : "Overleaf",
     "Integration of Overleaf" : "Інтеграція Overleaf",
-    "App to edit LaTeX files using Overleaf." : "Додаток для редагування файлів LaTeX за допомогою Overleaf.",
+    "App to edit LaTeX files using Overleaf." : "Застосунок для редагування файлів LaTeX за допомогою Overleaf.",
     "Overleaf integration" : "Інтеграція Overleaf",
     "Overleaf Server URL" : "URL-адреса сервера Overleaf",
     "Open file in Overleaf" : "Відкрити файл в Overleaf"
