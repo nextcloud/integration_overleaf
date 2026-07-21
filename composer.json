@@ -31,10 +31,10 @@
 	},
 	"require": {
 		"bamarni/composer-bin-plugin": "^1.8",
-		"php": "^8.1"
+		"php": "^8.3"
 	},
 	"require-dev": {
-		"nextcloud/ocp": "dev-stable33",
+		"nextcloud/ocp": "dev-master",
 		"roave/security-advisories": "dev-latest"
 	},
 	"config": {
@@ -44,7 +44,7 @@
 		"optimize-autoloader": true,
 		"sort-packages": true,
 		"platform": {
-			"php": "8.1"
+			"php": "8.3"
 		}
 	}
 }
