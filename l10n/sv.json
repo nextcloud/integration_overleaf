@@ -1,5 +1,10 @@
 { "translations": {
     "Connected accounts" : "Anslutna konton",
+    "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Integrering av Overleaf",
+    "App to edit LaTeX files using Overleaf." : "App för att redigera LaTeX-filer med Overleaf.",
+    "Overleaf integration" : "Overleaf-integrering",
+    "Overleaf Server URL" : "URL till Overleaf-servern",
     "Open file in Overleaf" : "Öppna fil i Overleaf"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
