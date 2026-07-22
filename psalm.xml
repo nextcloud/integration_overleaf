@@ -19,6 +19,9 @@
 	<extraFiles>
 		<directory name="vendor"/>
 	</extraFiles>
+	<stubs>
+		<file name="tests/stubs/oc_hooks_emitter.php" />
+	</stubs>
 	<issueHandlers>
 		<LessSpecificReturnStatement errorLevel="error"/>
 		<LessSpecificReturnType errorLevel="error"/>
