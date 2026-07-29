@@ -1,6 +1,12 @@
 OC.L10N.register(
     "integration_overleaf",
     {
-    "Connected accounts" : "Prijungtos paskyros"
+    "Connected accounts" : "Prijungtos paskyros",
+    "Overleaf" : "„Overleaf“",
+    "Integration of Overleaf" : "„Overleaf“ integravimas",
+    "App to edit LaTeX files using Overleaf." : "Programėlė „LaTeX“ failams redaguoti naudojant „Overleaf“.",
+    "Overleaf integration" : "„Overleaf“ integracija",
+    "Overleaf Server URL" : "„Overleaf“ serverio URL",
+    "Open file in Overleaf" : "Atidaryti failą „Overleaf“"
 },
 "nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);");
