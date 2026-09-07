@@ -1,6 +1,12 @@
 OC.L10N.register(
     "integration_overleaf",
     {
-    "Connected accounts" : "Prepojené účty"
+    "Connected accounts" : "Prepojené účty",
+    "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Integrácia s Overleafom",
+    "App to edit LaTeX files using Overleaf." : "Aplikácia na úpravu súborov LaTeX pomocou Overleafu.",
+    "Overleaf integration" : "Integrácia s Overleafom",
+    "Overleaf Server URL" : "URL servera Overleaf",
+    "Open file in Overleaf" : "Otvoriť súbor v Overleafe"
 },
 "nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);");
