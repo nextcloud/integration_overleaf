@@ -1,6 +1,12 @@
 OC.L10N.register(
     "integration_overleaf",
     {
-    "Connected accounts" : "Conturile conectate"
+    "Connected accounts" : "Conturile conectate",
+    "Overleaf" : "Overleaf",
+    "Integration of Overleaf" : "Integrare cu Overleaf",
+    "App to edit LaTeX files using Overleaf." : "Aplicație pentru editarea fișierelor LaTeX folosind Overleaf.",
+    "Overleaf integration" : "Integrare Overleaf",
+    "Overleaf Server URL" : "URL-ul serverului Overleaf",
+    "Open file in Overleaf" : "Deschide fișierul în Overleaf"
 },
 "nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));");
